@@ -1,23 +1,15 @@
 {
-  "name": "crawlspace",
+  "name": "my-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/OliBev59/CrawlSpace.git"
+  "devDependencies": {
+    "vite": "^3.0.9"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/OliBev59/CrawlSpace/issues"
-  },
-  "homepage": "https://github.com/OliBev59/CrawlSpace#readme",
   "dependencies": {
-    "ejs": "^3.1.8",
-    "express": "^4.18.1"
+    "ol": "latest"
   }
 }

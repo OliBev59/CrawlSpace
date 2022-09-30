@@ -1,4 +1,9 @@
 {
+  "type": "FeatureCollection",
+  "features": [
+  
+  
+  { 
     "type": "Feature",
     "geometry": {
       "type": "Point",
@@ -8,7 +13,7 @@
     "properties": {
       "name": "Woodies Craft Ale House"
     }
-  }
+  },
 
   {
     "type": "Feature",
@@ -20,7 +25,7 @@
     "properties": {
       "name": "The Three Horseshoes"
     }
-  }
+  },
 
   {
     "type": "Feature",
@@ -32,7 +37,7 @@
     "properties": {
       "name": "The New Inn"
     }
-  }
+  },
 
   {
     "type": "Feature",
@@ -44,7 +49,7 @@
     "properties": {
       "name": "The Headingley Taps"
     }
-  }
+  },
 
   {
     "type": "Feature",
@@ -56,7 +61,7 @@
     "properties": {
       "name": "Manahatta"
     }
-  }
+  },
 
   {
     "type": "Feature",
@@ -68,7 +73,7 @@
     "properties": {
       "name": "The Box"
     }
-  }
+  },
 
   {
     "type": "Feature",
@@ -80,7 +85,7 @@
     "properties": {
       "name": "The Skyrack"
     }
-  }
+  },
 
   {
     "type": "Feature",
@@ -92,7 +97,7 @@
     "properties": {
       "name": "The Original Oak"
     }
-  }
+  },
 
   {
     "type": "Feature",
@@ -104,7 +109,7 @@
     "properties": {
       "name": "The Hyde Park"
     }
-  } 
+  },
 
   {
     "type": "Feature",
@@ -116,7 +121,7 @@
     "properties": {
       "name": "The Library"
     }
-  } 
+  },
 
   {
     "type": "Feature",
@@ -128,7 +133,7 @@
     "properties": {
       "name": "The Pack Horse"
     }
-  } 
+  },
 
   {
     "type": "Feature",
@@ -140,7 +145,7 @@
     "properties": {
       "name": "The Eldon"
     }
-  } 
+  }, 
 
   {
     "type": "Feature",
@@ -152,7 +157,7 @@
     "properties": {
       "name": "Leeds University Union"
     }
-  } 
+  },
 
   {
     "type": "Feature",
@@ -164,7 +169,7 @@
     "properties": {
       "name": "The Fenton"
     }
-  }
+  },
 
   {
     "type": "Feature",
@@ -177,3 +182,5 @@
       "name": "The Dry Dock"
     }
   }
+
+]}

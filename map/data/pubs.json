@@ -1,0 +1,26 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-1.548567, 	53.801277          ]
+        },
+        "properties": {
+          "name": "pub1"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates":  [-1.558567, 	53.801277]
+        },
+        "properties": {
+          "name": "pub2",
+          "prop1": 0
+        }
+      }
+    ]
+  }

@@ -1,9 +1,9 @@
 {
   "type": "FeatureCollection",
   "features": [
+
   
-  
-  { 
+{
     "type": "Feature",
     "geometry": {
       "type": "Point",
@@ -157,7 +157,7 @@
     "properties": {
       "name": "Leeds University Union"
     }
-  },
+  }, 
 
   {
     "type": "Feature",

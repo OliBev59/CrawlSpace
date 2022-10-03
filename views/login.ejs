@@ -1,4 +1,4 @@
-<%- include('views/header.ejs') %>
+<%- include('header') %>
 
 <!-- 
 <div>
@@ -16,9 +16,14 @@
     <h1><%= title %></h1>
     <h2><%= myHeading%></h2>
     <p><%= message %></p>
+    <div>
+        <input type="text" id="user" placeholder ="Enter Username"> 
+        <input type="password" id="password" placeholder="Please enter password">
+        <input type="button" id="submit" value="My Round">
+    </div>
     <p><%= msg2%></p>
 </body>
 </html>
 
 
-<%- include('views/footer'); %>
+<%- include('footer'); %>

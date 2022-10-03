@@ -9,10 +9,10 @@ const router = express.Router();
 
 router.get("/login", (req, res) => {
     return res.render("login", {
-      title: "Log in",
-      message: "Crawl into the weekend",
-      myHeading: "This is my Heading",
-      msg2 :"just another message "
+      title: "Crawl Space",
+      
+      myHeading: "Login",
+      msg2 :"Crawl into the weekend"
     });
   });
 

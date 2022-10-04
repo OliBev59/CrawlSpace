@@ -1,27 +1,33 @@
-<%- include('views/header.ejs') %>
 
+<body>
+    <h1><%= title %></h1>
+    <h2><%= myHeading%></h2>
 
 <div>
-    <h1>Name</h1>
+    <h3> New username</h3>
+    <input type="text" id="user" placeholder ="Username"> 
 </div>
 
 
 
 <div>
-    <h1>Email</h1>
+    <h3>Email</h3>
+    <input type="text" id="user" placeholder ="Email"> 
 </div>
 
 
 
 <div>
-    <h1>Password</h1>
+    <h3>Password</h3>
+    <input type="password" id="password" placeholder="Please enter a password">
 </div>
 
 
 
 
 <div>
-    <h1>Confirm Password</h1>
+    <h3>Confirm Password</h3>
+    <input type="password" id="password" placeholder="Confirm password">
 </div>
-
-<%- include('views/footer'); %>
+<p><%= msg2%></p>
+</body>

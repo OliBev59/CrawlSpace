@@ -15,7 +15,13 @@ router.get("/login", (req, res) => {
     });
   });
 
-
+  router.get("/signup", (req, res) => {
+    return res.render("signup", {
+      title: "Crawl Space",
+      myHeading: "Sign Up",
+      msg2 :"Crawl into the weekend"
+    });
+  });
 
 
 

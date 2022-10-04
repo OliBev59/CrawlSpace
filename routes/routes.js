@@ -23,7 +23,12 @@ router.get("/login", (req, res) => {
     });
   });
 
-
+  router.get("/map", (req, res) => {
+    return res.render("map", {
+      title: "The Otley Run",
+      msg2 :"Crawl into the weekend"
+    });
+  });
 
 
 

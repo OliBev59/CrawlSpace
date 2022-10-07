@@ -30,6 +30,14 @@ router.get("/login", (req, res) => {
     });
   });
 
+  router.get("/home", (req, res) => {
+    return res.render("home", {
+      title: "Homepage",
+      myHeading: "My Crawls",
+      myHeading2: "Suggested Crawls",
+      msg2 :"Crawl into the weekend"
+    });
+  });
 
 
 

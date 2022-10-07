@@ -1,14 +1,49 @@
-<%- include('header'); %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"> 
+    <link rel="stylesheet" href="main.css" />
+
+<!-- <%- include('header'); %>
 
 <body>
     <h1><%= title %></h1>
     <h2><%= myHeading%></h2>
-   
-    <div>
-        <input type="text" id="user" placeholder ="Enter Username"> 
-        <input type="password" id="password" placeholder="Please enter password">
-        <input type="button" id="submit" value="My Round">
+    -->
+
+    <div class="homepage">   
+        <div class="logo">
+              <h1 class="crawlspace">CRAWLSPACE</h1>
+        </div>
+      
+<div class="usernameContainer">
+    <div class = "login">
+        <div>
+        <p class="usernameText"> username </p>  
+        </div>
+        <div class = "username">  
+        <input type="text" placeholder ="Enter your username"> 
     </div>
+</div>
+
+<div>
+    <p class="passwordText"> password </p>
+    </div>
+    <div class = "password"> 
+        <input type="password" placeholder="Enter your password">
+        </div>
+        <div class = "signInButton">
+        <input type="button" id="signInButton" value="Sign In">
+        </div>
+    </div>
+</div>
+
+
     <p><%= msg2%></p>
 </body>
 </html>

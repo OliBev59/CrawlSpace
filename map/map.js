@@ -14,13 +14,13 @@ import {Fill, Stroke, Style, Circle as CircleStyle} from 'ol/style';
 
 
 
-const vectorSource = new VectorSource ({ //database as object
+const pubSource = new VectorSource ({ //database as object
   format: new GeoJSON(),
   url: '/data/pubs.json',//source of vectors
 });
-const vectorLayer = new VectorLayer({
-  source: vectorSource,
-  style: {
+const vectorLayer = new VectorLayer({ //layer for points
+  source: pubSource, //source is pubSource
+  style: {  //style for points (red circle)
     'circle-radius': 5,
     'circle-fill-color': 'red'
   },
@@ -43,20 +43,19 @@ var map = new Map({ //new map
 });
 
 
- //provides a source of features for vector layers.
  const geolocation = new Geolocation({
   // enableHighAccuracy must be set to true to have the heading value.
   trackingOptions: {
     enableHighAccuracy: true,
   },
-  projection: view.getProjection(),
+  projection: view.getProjection(), //project onto the view
 });
 
-function el(id) {
+function el(id) { 
   return document.getElementById(id);
 }
 
-el('track').addEventListener('change', function () {
+el('track').addEventListener('change', function () { //see if tickbox has been checkd
   geolocation.setTracking(this.checked);
 });
 
@@ -81,7 +80,7 @@ geolocation.on('change:accuracyGeometry', function () {
   accuracyFeature.setGeometry(geolocation.getAccuracyGeometry());
 });
 
-const positionFeature = new Feature();
+const positionFeature = new Feature(); //style for location marker
 positionFeature.setStyle(
   new Style({
     image: new CircleStyle({

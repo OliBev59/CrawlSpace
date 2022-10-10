@@ -2,6 +2,10 @@ const express = require("express");
 
 const router = express.Router();
 
+const MongoClient = require('mongodb').MongoClient;
+
+const url = 'mongodb://127.0.0.1:27017';
+
 // router.get("/views", (req, res) => {
 //     return res.render("home")
 // });

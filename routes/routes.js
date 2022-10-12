@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const bodyParser = require('body-parser');
+const bcrypt = require("bcrypt");
 
 const MongoClient = require('mongodb').MongoClient;
 
@@ -85,8 +86,10 @@ router.get("/login", (req, res) => {
           }
            // checking user is over 18
           if (isValidDOB(req.body.dob)== true) {
-          customers.insertOne({ username: req.body.username, email: req.body.email, dob: req.body.dob, password: req.body.password, confirmPassword: req.body.confirmPassword }, (err, result) => {})
-          console.log("account created")
+            const hash = bcrypt.hash(req.body.password, 10, function(err, hash) {
+            console.log(hash)
+            customers.insertOne({ username: req.body.username, email: req.body.email, dob: req.body.dob, password: hash, confirmPassword: hash }, (err, result) => {})
+          });
           res.redirect("/home")
           } else { console.log("Try again")
           };

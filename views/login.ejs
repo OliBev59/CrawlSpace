@@ -9,43 +9,31 @@
     rel="stylesheet"> 
     <link rel="stylesheet" href="main.css" />
 
-<!-- <%- include('header'); %>
-
-<body>
-    <h1><%= title %></h1>
-    <h2><%= myHeading%></h2>
-    -->
 
     <div class="homepage">   
         <div class="logo">
               <h1 class="crawlspace">CRAWLSPACE</h1>
         </div>
-      
-<div class="usernameContainer">
-    <div class = "login">
-        <div>
-        <p class="usernameText"> username </p>  
-        </div>
-        <div class = "username">  
-        <input type="text" placeholder ="Enter your username"> 
+ 
+        
+<div class="loginContainer">
+    <div class ="username">
+    <p class="textStyles"> username</p>
+    <input type="text" class="formInput textStylesInput" placeholder ="Enter your username"> 
+    </div>
+    <div class ="password">
+    <p class="textStyles"> password </p>
+    <input type="password" class="formInput textStylesInput" placeholder="Enter your password">
     </div>
 </div>
 
-<div>
-    <p class="passwordText"> password </p>
-    </div>
-    <div class = "password"> 
-        <input type="password" placeholder="Enter your password">
-        </div>
-        <div class = "signInButton">
-        <button OnClick=" location.href='/home' ">My Round</button>
-        </div>
-    </div>
-</div>
+<button class = "button greenButton loginButton" OnClick=" location.href='/home' ">Login</button>
 
 
-    <p><%= msg2%></p>
-</body>
-</html>
-
+<div class="footer textStyles">
+    <p class="motto"><%= msg2%></p>
 <%- include('footer'); %>
+</div>
+</body>
+
+</html>

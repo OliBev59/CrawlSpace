@@ -10,99 +10,70 @@ body {
     margin-top: 40%;
 }
 
-.loginContainer {
-    justify-content:left;
-}
-
-.loginAndSignUp {
+.button {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     font-size: 14px;
-}
-
-
-.loginLink {
     display: flex; 
     color: white;
     justify-content: center;
-    background-color: #4b6043;
     padding-top: 5px;
     padding-bottom: 5px;
     text-decoration: none; 
     width: 40%;
     margin: auto;
     border-radius: 5px;
-    
 }
 
-.signUpLink {
-    display: flex; 
-    color: white;
-    justify-content: center;
+.greenButton {
+    background-color: #4b6043;
+}
+
+.almostBlackButton {
     background-color: #1e1e1f;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-decoration: none;
-    width: 40%;
-    margin: auto;    
-    border-radius: 5px;
+}
+
+.signUpButton {
     margin-top: 5px; 
 }
 
-.username { 
+.textStyles {
     display: flex; 
     color: white;
-    justify-content: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-decoration: none; 
-    margin: auto;
-    border-radius: 5px;
-}
-
-.username[type="text"] {
+    font-size: 15px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
 }
 
-.usernameText {
+.textStylesInput {
+    text-transform: capitalize;
+}
+
+.username, .password {
     display: flex;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    color: white;
+    flex-direction: column;
     justify-content: center;
-}
-
-.password {
-    display: flex; 
-    color: white;
-    justify-content: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-decoration: none; 
-    margin: auto;
-    border-radius: 5px;
-}
-
-.password[type="text"] {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-}
-
-.passwordText {
-    display: flex;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    color: white;
-    justify-content: center;
-}
-
-
-.signInButton {
-    display: flex;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; 
-    justify-content: center;
-    background-color: #4b6043;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-decoration: none; 
     width: 40%;
     margin: auto;
-    border-radius: 5px;
 }
 
+.loginButton {
+    margin-top: 5px;
+}
+
+.formInput {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+}
+
+.motto {
+    display: flex;
+    justify-content: center;
+}

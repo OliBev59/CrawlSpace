@@ -33,7 +33,7 @@ body {
 }
 
 .signUpButton {
-    margin-top: 5px; 
+    margin-top: 10px; 
 }
 
 .textStyles {
@@ -41,39 +41,48 @@ body {
     color: white;
     font-size: 15px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    text-transform: uppercase;
 }
 
-.textStylesInput {
-    text-transform: capitalize;
+.textStylesCapital {
+    text-transform: uppercase;
 }
 
 .username, .password {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40%;
+    width: 80%;
     margin: auto;
 }
 
 .loginButton {
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .formInput {
     padding-top: 5px;
     padding-bottom: 5px;
+    width: 100%;
 }
+
+.forgotPassword {
+    display: flex;
+    justify-content: center;
+    text-decoration: none; 
+    margin-top: 10px;
+}
+
 
 .footer {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 40%;
+    width: 100%;
     margin: auto;
+    margin-top: 80%;
 }
 
-.motto {
+.motto, .copywrite {
     display: flex;
     justify-content: center;
 }

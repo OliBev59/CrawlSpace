@@ -65,7 +65,7 @@ body {
     width: 100%;
 }
 
-.forgotPassword {
+.forgotPassword, .signUp {
     display: flex;
     justify-content: center;
     text-decoration: none; 
@@ -80,6 +80,10 @@ body {
     width: 100%;
     margin: auto;
     margin-top: 80%;
+}
+
+.footerSignUp {
+    margin-top: 30%;
 }
 
 .motto, .copywrite {

@@ -1,25 +1,42 @@
-<!-- <%- include('header'); %> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"> 
+    <link rel="stylesheet" href="main.css" />
 
 
 <body>
-    <h1><%= title %></h1>
-    <h2><%= myHeading%></h2>
 
-    <form class="registerForm" action=/signUp method="post">
-        <label for="Username">Username:<br>
-        <input type="text" name="username" required><br> </label> 
-        <label for="Email"> Email Address:<br>
-        <input type="email" name="email" required><br> </label>
-        <label for="Date of Birth"> Date of Birth:<br>
-        <input type="date" name="dob" required><br> </label>
-        <label for="Password">Password<br>
-        <input type="password" name="password" inputmode="numeric" minlength="4" maxlength="6" id='password'required><br> </label>
-        <label for="Confirm pin">Confirm Password:<br>
-        <input type="password" name="confirmPassword" inputmode="numeric" minlength="4" maxlength="6" id='confirmPassword'required><br> </label> 
-        <label for="submit"><input type="submit" value="Submit"></label>
-    </form>
+    <div class="homepage">   
+        <div class="logo">
+              <h1 class="crawlspace">CRAWLSPACE</h1>
+        </div>
+ 
+            </div>
+            <form class="registerForm" action=/signUp method="post">
+            <p class="textStyles textStylesCapital"> username </p>
+            <input type="text" id = "username" class="formInput textStylesInput" placeholder="Enter your username" required/>
+            <p class="textStyles textStylesCapital"> email </p>
+            <input type="text" id = "email" class="formInput textStylesInput" placeholder="Enter your email" required/>
+            <p class="textStyles textStylesCapital"> date of birth </p>
+            <input type="date" id = "dob" class="formInput textStylesInput" required/>
+            <p class="textStyles textStylesCapital"> password </p>
+            <input type="password" id = "password" class="formInput textStylesInput" inputmode="numeric" minlength="4" maxlength="6" required>
+            <p class="textStyles textStylesCapital"> confirm password </p>
+            <input type="password" id = "confirmPassword" class="formInput textStylesInput" inputmode="numeric" minlength="4" maxlength="6" required>
+            <input type="submit" id="submitSignUp" class = "button greenButton loginButton" value="Submit">
+       
+        </div>
 
-<p><%= msg2%></p>
+        <div class="footer footerSignUp textStyles textStylesCapital">
+            <p class="motto"><%= msg2%></p>
+        <%- include('footer'); %>
+        </div>
+
 </body>
-
-<%- include('footer'); %>
+</html>

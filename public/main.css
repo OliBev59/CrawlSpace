@@ -1,5 +1,6 @@
 body {
     background-color: #242526;
+    height: 100%;
 }
       
 .crawlspace {
@@ -9,6 +10,11 @@ body {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; 
     margin-top: 40%;
 }
+
+.crawlspaceHome {
+    margin-top: 10%;
+}
+
 
 .button {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -43,11 +49,18 @@ body {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 
-.textStylesCapital {
-    text-transform: uppercase;
+.labels {
+    padding: 10px;
+    text-align: start;
+    display: block;
 }
 
-.username, .password {
+.textStylesCapital {
+    text-transform: uppercase;
+    transform: scale(1, 0.9);
+}
+
+.username, .password, .registerForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,21 +85,91 @@ body {
     margin-top: 10px;
 }
 
-
 .footer {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    position: absolute;
+    bottom: 30px;
     width: 100%;
-    margin: auto;
-    margin-top: 80%;
-}
+    height: 60px;
+ }
 
 .footerSignUp {
-    margin-top: 30%;
+    width: 80%;
 }
 
 .motto, .copywrite {
     display: flex;
     justify-content: center;
+}
+
+
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .slider {
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  .slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+  }
+
+  .slides::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 220px;
+    height: 150px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+  }
+
+  img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+.suggestedCrawlsSlider {
+    margin-top: 30px;
 }

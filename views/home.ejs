@@ -1,11 +1,42 @@
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"> 
+    <link rel="stylesheet" href="main.css" />
+
 <%- include('header'); %>
 
 
 <body>
-    <h1><%= title %></h1>
-    <h2><%= myHeading%></h2>
-    <h2><%= myHeading2%></h2>
-    <p><%= msg2%></p>
-</body>
 
-<%- include('footer'); %>
+    <div class="homepage">   
+        <div class="logo">
+              <h1 class="crawlspace crawlspaceHome">CRAWLSPACE</h1>
+        </div>
+
+        <div class="myCrawlsSlider">
+            <label class="textStyles textStylesCapital labels"> My crawls </label>
+            <div class="slides">
+              <div id="slide-1"></div>
+              <div id="slide-2"></div>
+              <div id="slide-3"></div>
+              <div id="slide-4"></div>
+              <div id="slide-5"></div>
+            </div>
+          </div>
+
+          <div class="suggestedCrawlsSlider">
+            <label class="textStyles textStylesCapital labels"> Suggested crawls </label>
+            <div class="slides">
+              <div id="slide-6"></div>
+              <div id="slide-7"></div>
+              <div id="slide-8"></div>
+              <div id="slide-9"></div>
+              <div id="slide-10"></div>
+            </div>
+          </div>
+
+          <div class="footer textStyles textStylesCapital">
+            <p class="motto"><%= msg2%></p>
+        <%- include('footer'); %>
+        </div>
+</body>

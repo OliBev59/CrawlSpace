@@ -18,19 +18,22 @@
         
 <div class="loginContainer">
     <div class ="username">
-    <p class="textStyles"> username</p>
+    <p class="textStyles textStylesCapital"> username</p>
     <input type="text" class="formInput textStylesInput" placeholder ="Enter your username"> 
     </div>
     <div class ="password">
-    <p class="textStyles"> password </p>
+    <p class="textStyles textStylesCapital"> password </p>
     <input type="password" class="formInput textStylesInput" placeholder="Enter your password">
     </div>
 </div>
 
-<button class = "button greenButton loginButton" OnClick=" location.href='/home' ">Login</button>
+<a class = "button greenButton loginButton" href="/home">Login</a>
 
+<div class ="forgotPassword">
+<a class = "forgotPassword textStyles" href="/?"> Forgot your password?</a>
+</div>
 
-<div class="footer textStyles">
+<div class="footer textStyles textStylesCapital">
     <p class="motto"><%= msg2%></p>
 <%- include('footer'); %>
 </div>

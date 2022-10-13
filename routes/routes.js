@@ -4,15 +4,14 @@ const bodyParser = require('body-parser');
 const bcrypt = require("bcrypt");
 
 const MongoClient = require('mongodb').MongoClient;
-
 const url = 'mongodb://127.0.0.1:27017';
 
-const app = express()
-app.use(express)
+const app = express();
+app.use(express);
 
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-//added a function to validate age is >18 when signing up!
+//added a function to validate age is >18 when signing up
 function isValidDOB(dob) {
 let splitDOB= dob.split('-')
 let userDate = new Date(dob)
@@ -38,9 +37,9 @@ if (userYear =='' || userMonth == '' || userDay == ''){
 }
 else {
 return true
-}
-}
-module.exports={isValidDOB}
+}};
+
+module.exports={isValidDOB};
 
 router.get("/login", (req, res) => {
     return res.render("login", {
@@ -93,9 +92,8 @@ router.get("/login", (req, res) => {
           res.redirect("/home")
           } else { console.log("Try again")
           };
-      }
-    )
-  })
+      });
+  });
 
   router.get("/map", (req, res) => {
     return res.render("map", {

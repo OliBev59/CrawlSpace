@@ -1,0 +1,30 @@
+@import "node_modules/ol/ol.css";
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+
+/* popup stlye */
+
+.popup-container{
+  background-color: rgb(2, 110, 205);
+  width: 150px;
+  color: white;
+  text-align: center;
+  border-radius: 1px;
+  padding: 2px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -80px;
+}
+

@@ -3,7 +3,7 @@
 
 import OSM from 'ol/source/OSM';
 import TileLayer from 'ol/layer/Tile';
-import {Map, View, Feature} from 'ol';
+import {Map, View, Feature, Overlay} from 'ol';
 import {fromLonLat} from 'ol/proj';
 import GeoJSON from 'ol/format/GeoJSON';
 import VectorLayer from 'ol/layer/Vector';
@@ -11,6 +11,7 @@ import VectorSource from 'ol/source/Vector';
 import Geolocation from 'ol/Geolocation';
 import Point from 'ol/geom/Point';
 import {Fill, Stroke, Style, Circle as CircleStyle} from 'ol/style';
+
 
 
 
@@ -24,6 +25,7 @@ const vectorLayer = new VectorLayer({ //layer for points
     'circle-radius': 5,
     'circle-fill-color': 'red'
   },
+  title:'otleyRun'
 });
 
 const view = new View({
@@ -75,6 +77,7 @@ geolocation.on('error', function (error) {
   info.style.display = '';
 });
 
+//not sure how useful this is but can remove later
 const accuracyFeature = new Feature();
 geolocation.on('change:accuracyGeometry', function () {
   accuracyFeature.setGeometry(geolocation.getAccuracyGeometry());
@@ -96,14 +99,49 @@ positionFeature.setStyle(
   })
 );
 
+//updates location
 geolocation.on('change:position', function () {
   const coordinates = geolocation.getPosition();
   positionFeature.setGeometry(coordinates ? new Point(coordinates) : null);
 });
 
+//position vectorlayer
 new VectorLayer({
   map: map,
   source: new VectorSource({
     features: [accuracyFeature, positionFeature],
   }),
 });
+
+
+//Vector feature popup logic
+const popupContainerElement = document.querySelector(".popup-container");
+const popupLayer = new Overlay({
+  element: popupContainerElement
+})
+
+map.addOverlay(popupLayer);
+const popupFeatureName = document.getElementById('feature-name')
+
+
+
+  // click on the map
+map.on('click',function(e){
+  popupLayer.setPosition(undefined); //makes the popup disappear if you don't click on a feature
+
+  //change popup to featurename
+  map.forEachFeatureAtPixel(e.pixel, function(feature,layer){
+    let clickedCoordinate = e.coordinate;
+    let clickedFeatureName = feature.get('name');
+    
+    console.log(`feature name is ${clickedFeatureName}`)
+
+    popupLayer.setPosition(clickedCoordinate);
+    popupFeatureName.innerHTML = clickedFeatureName;
+  },
+  {
+    layerFilter: function(layerCandidate){
+      return layerCandidate.get('title') === 'otleyRun'
+    }
+  })
+})

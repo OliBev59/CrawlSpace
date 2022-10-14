@@ -1,46 +1,70 @@
+<!--This Header page is for everypage of the web app other than: Access page, Login and Sign up. -->
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crawl Space</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- below is the link for the image of the hamburger menu-->
 
-    
-    
-    
-    // drop down menu 
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">Site</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-        <li class="nav-item">
-              <a class="nav-link" href="/a">A</a>
-            </li>
-            <li>
-                <a class="nav-link" href="/crawls">About</a>
-                </li>
-        <li>
-        <a class="nav-link" href="/map">Contact</a>
-        </li>
-        
-        
-          <li>
-            <a class = "nav-link link-primary" href = "/login">Sign Up</a>
-          </li>
-          <li>
-          <a class = "nav-link link-primary" href = "/signup">Login</a>
-        
-      </ul>
-        </div>
-      </nav>
+  <link rel="stylesheet" href="main.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+  <title>Crawl Space</title>
 
 </head>
+
+<!-- below are the hamburger menu links to the rest of the app -->
+
+<body>
+
+  <ul class="menu">
+    <li><a class="menuItem" href="home">Home</a></li>
+    <li><a class="menuItem" href="profile">Profile</a></li>
+    <li><a class="menuItem" href="myCrawls">My Crawls</a></li>
+    <li><a class="menuItem" href="settings">Settings</a></li>
+    <li><a class="menuItem" href="crawls">Crawls</a></li>
+    <li><a class="menuItem" href="maps">Maps</a></li>
+    <li><a class="menuItem" href="logout">Log out</a></li>
+  </ul>
+  <button class="hamburger">
+    <!-- below are referneces used by the CS and JS pages to animate the hamburger menu-->
+    <!-- material icons https://material.io/resources/icons/ -->
+    <i class="menuIcon material-icons">menu</i>
+    <i class="closeIcon material-icons">close</i>
+  </button>
+  <script>// const header = require('express');
+
+const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger= document.querySelector(".hamburger");
+const closeIcon= document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+
+function toggleMenu() {
+  if (menu.classList.contains("showMenu")) {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  } else {
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
+  }
+}
+
+hamburger.addEventListener("click", toggleMenu);
+
+menuItems.forEach( 
+  function(menuItem) { 
+    menuItem.addEventListener("click", toggleMenu);
+  }
+)
+    </script>
+  
+  
+ 
+</body>

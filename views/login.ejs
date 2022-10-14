@@ -15,23 +15,24 @@
               <h1 class="crawlspace">CRAWLSPACE</h1>
         </div>
  
-        
+<form class= "loginForm" action="/login" method="post">
 <div class="loginContainer">
     <div class ="username">
     <label class="textStyles textStylesCapital labels"> username</label>
-    <input type="text" class="formInput textStylesInput" placeholder ="Enter your username"> 
+    <input type="text" name="username" class="formInput textStylesInput" placeholder ="Enter your username" required> 
     </div>
     <div class ="password">
     <label class="textStyles textStylesCapital labels"> password </label>
-    <input type="password" class="formInput textStylesInput" placeholder="Enter your password">
+    <input type="password" name= "password" class="formInput textStylesInput" placeholder="Enter your password" required>
     </div>
 </div>
 
-<input type="submit" id = "loginSubmit" class = "button greenButton loginButton" value="Login">
+<label for="submit"><input type="submit" class = "button greenButton loginButton" value="Login"></label>
 
 <div class ="forgotPassword">
 <a class = "forgotPassword textStyles" href="/?"> Forgot your password?</a>
 </div>
+</form>
 
 <div class="footer textStyles textStylesCapital">
     <p class="motto"><%= msg2%></p>

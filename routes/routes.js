@@ -95,6 +95,8 @@ router.get("/login", (req, res) => {
       });
   });
 
+  //need to add a find to make sure the email doesn't already exist in database 
+
   router.get("/map", (req, res) => {
     return res.render("map", {
       title: "The Otley Run",

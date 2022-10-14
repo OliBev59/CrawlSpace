@@ -12,9 +12,12 @@ body {
 }
 
 .crawlspaceHome {
-    margin-top: 10%;
+    margin-top: 20%;
 }
 
+.crawlspaceInput {
+  margin-top: 30%;
+}
 
 .button {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -109,7 +112,7 @@ body {
 
 
 
-
+/* Slider CSS */
 
 * {
     box-sizing: border-box;
@@ -173,3 +176,52 @@ body {
 .suggestedCrawlsSlider {
     margin-top: 30px;
 }
+
+
+
+/* Header and Burger menu CSS */
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: black;
+    color: black;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: #242526;
+    color: white;
+  }
+
+  .crawlsLabel {
+    background-color: black;
+  }

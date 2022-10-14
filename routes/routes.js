@@ -113,6 +113,7 @@ router.get("/login", (req, res) => {
       myHeading: "My Crawls",
       myHeading2: "Suggested Crawls",
       msg2 :"Crawl into the weekend"
+      
     });
   });
 
@@ -127,7 +128,7 @@ router.get("/login", (req, res) => {
   });
 
 
-// link path to myCrawls
+// link to myCrawls
 router.get("/myCrawls", (req, res) => {
   return res.render("myCrawls", {
     title: "Welcome to your Bar"
@@ -135,8 +136,13 @@ router.get("/myCrawls", (req, res) => {
   });
 });
 
-// Link path to settings 
-
+// Link to settings 
+// router.get("/settings", (req, res) => {
+//   return res.render("settings", {
+//     title: "Mix up your experience"
+    
+//   });
+// });
 
 // link to Pre built Crawls 
 router.get("/crawls", (req, res) => {
@@ -148,7 +154,7 @@ router.get("/crawls", (req, res) => {
 
 
 
-//link path to the map page 
+//link to map page 
   router.get("/map", (req, res) => {
     return res.render("map", {
       title: "The Otley Run",

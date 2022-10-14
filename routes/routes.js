@@ -158,6 +158,12 @@ router.get("/crawls", (req, res) => {
   });
 
 
+  
+  router.get("/", (req, res) => {
+    return res.render("logout", {
+    });
+  });
+
 
 
 module.exports =router;

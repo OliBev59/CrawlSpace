@@ -28,15 +28,42 @@
     <li><a class="menuItem" href="settings">Settings</a></li>
     <li><a class="menuItem" href="crawls">Crawls</a></li>
     <li><a class="menuItem" href="maps">Maps</a></li>
-    <li><a class="menuItem" href="logout">Log out</a></li>
+    <li><a class="menuItem" href="/">Log out</a></li>
   </ul>
-  <button class="hamburger">
-    <!-- below are referneces used by the CS and JS pages to animate the hamburger menu-->
+
+  <button class="hamburger greenButton">
     <!-- material icons https://material.io/resources/icons/ -->
-    <i class="menuIcon material-icons">menu</i>
+    <i class="menuIcon material-icons greenButton">menu</i>
     <i class="closeIcon material-icons">close</i>
   </button>
-  <script src="/routes/burgerMenu.js">// Link to burger menu JS </script>
+
+  <script>
+    const menu = document.querySelector(".menu");
+    const menuItems = document.querySelectorAll(".menuItem");
+    const hamburger= document.querySelector(".hamburger");
+    const closeIcon= document.querySelector(".closeIcon");
+    const menuIcon = document.querySelector(".menuIcon");
+
+      function toggleMenu() {
+        if (menu.classList.contains("showMenu")) {
+            menu.classList.remove("showMenu");
+            closeIcon.style.display = "none";
+            menuIcon.style.display = "block";
+        } else {
+            menu.classList.add("showMenu");
+            closeIcon.style.display = "block";
+            menuIcon.style.display = "none";
+        }
+      }
+
+    hamburger.addEventListener("click", toggleMenu);
+
+    menuItems.forEach( 
+      function(menuItem) { 
+        menuItem.addEventListener("click", toggleMenu);
+      }
+    )
+  </script>
   
   
  

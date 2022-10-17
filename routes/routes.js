@@ -97,22 +97,78 @@ router.get("/login", (req, res) => {
 
   //need to add a find to make sure the email doesn't already exist in database 
 
-  router.get("/map", (req, res) => {
-    return res.render("map", {
-      title: "The Otley Run",
-      msg2 :"Crawl into the weekend"
-    });
-  });
 
+
+
+
+
+
+
+
+
+// link in burger menu to homepage 
   router.get("/home", (req, res) => {
     return res.render("home", {
       title: "Homepage",
       myHeading: "My Crawls",
       myHeading2: "Suggested Crawls",
       msg2 :"Crawl into the weekend"
+      
     });
   });
 
+//link path to customer profile page 
+  router.get("/profile", (req, res) => {
+    return res.render("profile", {
+      title: "Your Profile",
+      myHeading: "My Crawls",
+      myHeading2: "Suggested Crawls",
+      msg2 :"Crawl into the weekend"
+    });
+  });
+
+
+// link to myCrawls
+router.get("/myCrawls", (req, res) => {
+  return res.render("myCrawls", {
+    title: "Welcome to your Bar"
+
+  });
+});
+
+// Link to settings 
+// router.get("/settings", (req, res) => {
+//   return res.render("settings", {
+//     title: "Mix up your experience"
+    
+//   });
+// });
+
+// link to Pre built Crawls 
+router.get("/crawls", (req, res) => {
+  return res.render("crawls", {
+    title: "Ready Mixed Crawls"
+    
+  });
+});
+
+
+
+//link to map page 
+  router.get("/map", (req, res) => {
+    return res.render("map", {
+      title: "The Otley Run",
+      msg2 :"Crawl into the weekend"
+
+    });
+  });
+
+
+  
+  router.get("/", (req, res) => {
+    return res.render("logout", {
+    });
+  });
 
 
 

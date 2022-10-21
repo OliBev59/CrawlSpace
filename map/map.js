@@ -12,20 +12,26 @@ import Geolocation from 'ol/Geolocation';
 import Point from 'ol/geom/Point';
 import {Fill, Stroke, Style, Circle as CircleStyle} from 'ol/style';
 
+var otleyRunVisible = false
 
-
+const otleyRunToggle = document.getElementById('otleyRunToggle');
+otleyRunToggle.addEventListener('click', (event) => {
+    otleyRunVisible = document.getElementById('otleyRunToggle').checked;
+    otleyRunLayer.setVisible(otleyRunVisible)
+}); 
 
 const pubSource = new VectorSource ({ //database as object
   format: new GeoJSON(),
   url: '/data/pubs.json',//source of vectors
 });
-const vectorLayer = new VectorLayer({ //layer for points
+const otleyRunLayer = new VectorLayer({ //layer for points
   source: pubSource, //source is pubSource
   style: {  //style for points (red circle)
     'circle-radius': 5,
     'circle-fill-color': 'red'
   },
-  title:'otleyRun'
+  title:'otleyRun',
+  visible: otleyRunVisible
 });
 
 const view = new View({
@@ -39,7 +45,7 @@ var map = new Map({ //new map
     new TileLayer({
       source: new OSM(), //chuck  map on a layer
     }),
-    vectorLayer, 
+    otleyRunLayer, 
   ],
   view: view
 });

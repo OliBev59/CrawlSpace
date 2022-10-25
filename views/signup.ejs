@@ -19,17 +19,17 @@
  
             </div>
             <form class="registerForm" action=/signUp method="post">
-            <label class="textStyles textStylesCapital labels"> username </label>
-            <input type="text" id = "username" class="formInput textStylesInput" placeholder="Enter your username" required/>
-            <label class="textStyles textStylesCapital labels"> email </label>
-            <input type="text" id = "email" class="formInput textStylesInput" placeholder="Enter your email" required/>
-            <label for="Date of Birth" class="textStyles textStylesCapital labels"> date of birth </label>
-            <input type="date" name="dob" id ="dob" class="formInput textStylesInput" required/>
-            <label class="textStyles textStylesCapital labels"> password </label>
-            <input type="password" id = "password" class="formInput textStylesInput" inputmode="numeric" minlength="4" maxlength="6" placeholder = "Enter your password" required>
-            <label class="textStyles textStylesCapital labels"> confirm password </label>
-            <input type="password" id = "confirmPassword" class="formInput textStylesInput" inputmode="numeric" minlength="4" maxlength="6" placeholder = "Confirm password" required>
-            <input type="submit" id="submitSignUp" class = "button greenButton loginButton" value="Get crawling">
+            <label for="username" class="textStyles textStylesCapital labels"> username <br>
+            <input type="text" name="username" id = "username" class="formInput textStylesInput" placeholder="Enter your username" required/> <br> </label>
+            <label for="email" class="textStyles textStylesCapital labels"> email <br>
+            <input type="text" name="email" id = "email" class="formInput textStylesInput" placeholder="Enter your email" required/> <br> </label>
+            <label for="Date of Birth" class="textStyles textStylesCapital labels"> date of birth <br>
+            <input type="date" name="dob" id ="dob" class="formInput textStylesInput" required/> </label>
+            <label for="password" class="textStyles textStylesCapital labels"> password <br>
+            <input type="password" name="password" id ="password" class="formInput textStylesInput" inputmode="numeric" minlength="4" maxlength="6" placeholder = "Enter your password" required> <br> </label>
+            <label for="confirm password" class="textStyles textStylesCapital labels"> confirm password <br>
+            <input type="password" name="confirmPassword" id ="confirmPassword" class="formInput textStylesInput" inputmode="numeric" minlength="4" maxlength="6" placeholder = "Confirm password" required> <br> </label>
+            <label for="submit"> <input type="submit" id="submitSignUp" class = "button greenButton loginButton" value="Get crawling"> </label>
        
         </div>
 

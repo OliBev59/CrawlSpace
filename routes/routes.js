@@ -72,12 +72,10 @@ router.get("/login", (req, res) => {
         if (err) {
           return console.log(err)
         }
-    
         // specify the database and collection to access and update customer data
         const db = client.db('pubsDB')
         console.log(`MongoDB Connected: ${url}`)
         const customers = db.collection('customers')
-
         // adding inputted information to database
         // checking passwords match
           if (req.body.password === req.body.confirmPassword) {
@@ -97,11 +95,44 @@ router.get("/login", (req, res) => {
 
   //need to add a find to make sure the email doesn't already exist in database 
 
-
-
-
-
-
+  //post route for login to CrawlSpace
+  router.post("/login", urlencodedParser, (req, res) => {
+    console.log("posted to login")
+    console.log(req.body)
+    // connecting to mongoDB
+    MongoClient.connect(
+      url,
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+      },
+      async (err, client) => {
+        if (err) {
+          return console.log(err)
+        }
+        // specify the database and collection to access and update customer data
+        const db = client.db('pubsDB')
+        console.log(`MongoDB Connected: ${url}`)
+        const customers = db.collection('customers')
+        //finding user information for database 
+        if (await customers.findOne({username : req.body.username})) {
+          console.log("user exists")
+          const customerInfo = await customers.findOne({username : req.body.username})
+          const hashInDb = customerInfo.password
+          bcrypt.compare(req.body.password, hashInDb, function(err, result) {
+            if (result) {
+              res.redirect('/home')
+            } else {
+              res.send("error: invalid credentials")
+            }
+          });
+        } 
+        else {
+        console.log("user not found")
+        res.redirect("/signup")
+        };
+       })
+    });
 
 
 

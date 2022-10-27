@@ -3,6 +3,7 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const bcrypt = require("bcrypt");
 
+//connecting to MongoDB database
 const MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb://127.0.0.1:27017';
 
@@ -41,6 +42,7 @@ return true
 
 module.exports={isValidDOB};
 
+//get route to render login page
 router.get("/login", (req, res) => {
     return res.render("login", {
       title: "Crawl Space",
@@ -49,6 +51,7 @@ router.get("/login", (req, res) => {
     });
   });
 
+  //get route to render signup page
   router.get("/signup", (req, res) => {
     return res.render("signup", {
       title: "Crawl Space",
@@ -57,11 +60,11 @@ router.get("/login", (req, res) => {
     });
   });
 
-  // route to sign up to CrawlSpace
+  //post route to sign up to CrawlSpace
   router.post("/signup",urlencodedParser, (req, res) => {
     console.log("posted to signup")
     console.log(req.body)
-    // connecting to mongoDB
+    // connecting to MongoDB database
     MongoClient.connect(
       url,
       {
@@ -95,11 +98,11 @@ router.get("/login", (req, res) => {
 
   //need to add a find to make sure the email doesn't already exist in database 
 
-  //post route for login to CrawlSpace
+  //post route to log in to CrawlSpace
   router.post("/login", urlencodedParser, (req, res) => {
     console.log("posted to login")
     console.log(req.body)
-    // connecting to mongoDB
+    // connecting to MongoDB database
     MongoClient.connect(
       url,
       {
@@ -117,19 +120,20 @@ router.get("/login", (req, res) => {
         //finding user information for database 
         if (await customers.findOne({username : req.body.username})) {
           console.log("user exists")
+          // retrieving and comparing user password to password stored in the database
           const customerInfo = await customers.findOne({username : req.body.username})
           const hashInDb = customerInfo.password
           bcrypt.compare(req.body.password, hashInDb, function(err, result) {
             if (result) {
-              res.redirect('/home')
+              res.redirect('/home') // if login is successful, user is redirected to homepage
             } else {
-              res.send("error: invalid credentials")
+              res.send("error: invalid credentials - please try again") // error is presented to user if password is incorrect
             }
           });
         } 
         else {
         console.log("user not found")
-        res.redirect("/signup")
+        res.redirect("/signup") // if the user does not have an account, they are redirected to the signup page
         };
        })
     });

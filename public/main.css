@@ -225,3 +225,18 @@ body {
     background-color: black;
   }
 
+  /* pop-up styling for map */
+
+  .popup-container{
+    background-color: rgb(2, 110, 205);
+    width: 150px;
+    color: white;
+    text-align: center;
+    border-radius: 1px;
+    padding: 2px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -80px;
+  }

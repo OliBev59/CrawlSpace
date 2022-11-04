@@ -12,7 +12,7 @@ body {
 }
 
 .crawlspaceHome {
-    margin-top: 20%;
+    margin-top: 5%;
 }
 
 .crawlspaceInput {
@@ -61,6 +61,10 @@ body {
 .textStylesCapital {
     text-transform: uppercase;
     transform: scale(1, 0.9);
+}
+
+.crawlName {
+  padding: 10px;
 }
 
 .username, .password, .registerForm {
@@ -138,7 +142,7 @@ body {
   }
 
   .slides::-webkit-scrollbar-thumb {
-    background: black;
+    background: #242526;
     border-radius: 10px;
   }
 
@@ -149,8 +153,8 @@ body {
   .slides > div {
     scroll-snap-align: start;
     flex-shrink: 0;
-    width: 220px;
-    height: 150px;
+    width: 250px;
+    height: 200px;
     margin-right: 10px;
     border-radius: 10px;
     background: #eee;
@@ -177,6 +181,25 @@ body {
 }
 
 
+/* .myFriends > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+  }
+ */
+
 
 /* Header and Burger menu CSS */
 
@@ -184,6 +207,7 @@ body {
     overflow: hidden;
     background-color: #333;
     position: relative;
+    margin-bottom: 10px;
   }
   
   /* Hide the links inside the navigation menu (except for logo/home) */
@@ -209,12 +233,12 @@ body {
     top: 0;
   }
   
-  /* Add a grey background color on mouse-over */
+/* Add a grey background color on mouse-over */
   .topnav a:hover {
-    background-color: black;
-    color: black;
-  }
-  
+    background-color: #1e1f20;
+    color: white;
+  } 
+
   /* Style the active link (or home/logo) */
   .active {
     background-color: #242526;
@@ -240,3 +264,11 @@ body {
     left: 50%;
     margin-left: -80px;
   }
+
+  .mapToggleInfo {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+}
+

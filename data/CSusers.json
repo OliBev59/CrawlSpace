@@ -1,0 +1,10 @@
+[
+    {
+      "username": "Ellie",
+      "email": "ellie@gmail.com",
+      "dob": "31/01/1996",
+      "password": "hello",
+      "confirmPassword": "hello"
+    }
+]
+

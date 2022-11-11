@@ -8,9 +8,7 @@ body {
     display: flex;
     justify-content: center;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; 
-    margin-top: 40vh;
-    
-    
+    margin-top: 30vh;
 }
 
 .crawlspaceHome {
@@ -23,7 +21,7 @@ body {
   }
 
 .crawlspaceInput {
-  margin-top: 30%;
+  margin-top: 45%;
 }
 
 
@@ -69,6 +67,7 @@ body {
   font-size: 25px;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;;
 }
+
 .labels {
     padding: 10px;
     text-align: start;
@@ -128,13 +127,8 @@ body {
 .motto, .copywrite {
     display: flex;
     justify-content: center;
-    margin-top: -2vh;
-  
-   
-    
+    margin-top: -2vh;   
 }
-
-
 
 
 
@@ -292,4 +286,3 @@ body {
     justify-content: center;
     margin-top: 15px;
 }
-

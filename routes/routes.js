@@ -172,12 +172,12 @@ router.get("/myCrawls", (req, res) => {
 });
 
 // Link to settings 
-// router.get("/settings", (req, res) => {
-//   return res.render("settings", {
-//     title: "Mix up your experience"
+router.get("/settings", (req, res) => {
+  return res.render("settings", {
+    title: "Mix up your experience"
     
-//   });
-// });
+  });
+});
 
 // link to Pre built Crawls 
 router.get("/crawls", (req, res) => {

@@ -1,5 +1,5 @@
 body {
-    background-color: #242526;
+    background-color:  #4b6043;
     height: 100%;
 }
       
@@ -13,8 +13,12 @@ body {
 }
 
 .crawlspaceHome {
-    margin-top: 5%;
-}
+    color: white;
+    margin-top: 1vh;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    justify-content: center;
+    display:flex;
+  }
 
 .crawlspaceInput {
   margin-top: 30%;
@@ -101,9 +105,10 @@ body {
     justify-content: center;
     flex-direction: column;
     position: absolute;
-    bottom: 30px;
+    bottom: 10px;
     width: 100%;
     height: 60px;
+
  }
 
 .footerSignUp {
@@ -113,6 +118,8 @@ body {
 .motto, .copywrite {
     display: flex;
     justify-content: center;
+   
+    
 }
 
 
@@ -206,7 +213,7 @@ body {
 
 
 /* Header and Burger menu CSS */
-
+/* Below is the box where links reside once icon clicked */
 .topnav {
     overflow: hidden;
     background-color: #333;
@@ -230,19 +237,15 @@ body {
   
   /* Style the hamburger menu */
   .topnav a.icon {
-    background: black;
+    background: #242526;
     display: block;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 20px;
+    
   }
-  
-/* Add a grey background color on mouse-over */
-  .topnav a:hover {
-    background-color: #1e1f20;
-    color: white;
-  } 
 
+  
   /* Style the active link (or home/logo) */
   .active {
     background-color: #242526;

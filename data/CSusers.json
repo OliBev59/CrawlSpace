@@ -1,10 +1,46 @@
-[
-    {
-      "username": "Ellie",
-      "email": "ellie@gmail.com",
-      "dob": "31/01/1996",
-      "password": "hello",
-      "confirmPassword": "hello"
-    }
-]
-
+[{
+  "_id": {
+    "$oid": "635929d33e1cb66b868000d5"
+  },
+  "username": "vi",
+  "email": "vi@vi",
+  "dob": "1992-12-12",
+  "password": "$2b$10$y.pKlrsWIhnal5BY7pD4PeSJQ0oQQAdtDoorATxkX7/jp7jV2WZPe",
+  "confirmPassword": "$2b$10$y.pKlrsWIhnal5BY7pD4PeSJQ0oQQAdtDoorATxkX7/jp7jV2WZPe"
+},{
+  "_id": {
+    "$oid": "63592a0e3e1cb66b868000d6"
+  },
+  "username": "vi2",
+  "email": "vi2@v",
+  "dob": "2001-02-02",
+  "password": "$2b$10$ls3mQoPG5kO7GTiKHtUgMubj0wqTTk6OmiHq7XLDX4kviPdIHcLHq",
+  "confirmPassword": "$2b$10$ls3mQoPG5kO7GTiKHtUgMubj0wqTTk6OmiHq7XLDX4kviPdIHcLHq"
+},{
+  "_id": {
+    "$oid": "6372278146480374be64e6f9"
+  },
+  "username": "Ellie",
+  "email": "ellie@gmail.com",
+  "dob": "31/01/1996",
+  "password": "hello",
+  "confirmPassword": "hello"
+},{
+  "_id": {
+    "$oid": "6374ebbe4535e396d62868f9"
+  },
+  "username": "hi",
+  "email": "hi@hi.com",
+  "dob": "1992-12-12",
+  "password": "$2b$10$5eojRdzuipZeIp/xskdwguKeSiMnHc.hpShzc9puMXTiMqxbU79Ii",
+  "confirmPassword": "$2b$10$5eojRdzuipZeIp/xskdwguKeSiMnHc.hpShzc9puMXTiMqxbU79Ii"
+},{
+  "_id": {
+    "$oid": "63761b4a5dbdcf735633acee"
+  },
+  "username": "Ellie",
+  "email": "ellie@gmail.com",
+  "dob": "31/01/1996",
+  "password": "hello",
+  "confirmPassword": "hello"
+}]

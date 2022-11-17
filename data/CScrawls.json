@@ -1,0 +1,205 @@
+[{
+    "_id": {
+      "$oid": "633d8c4bb2da5c28017b5e8b"
+    },
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.5829645500000045,
+            53.828016700000006
+          ]
+        },
+        "properties": {
+          "name": "Woodies Craft Ale House"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.5827577267142834,
+            53.82778345
+          ]
+        },
+        "properties": {
+          "name": "The Three Horseshoes"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.5818628524268123,
+            53.82664495
+          ]
+        },
+        "properties": {
+          "name": "The New Inn"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.5796532,
+            53.8205742
+          ]
+        },
+        "properties": {
+          "name": "The Headingley Taps"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.5809584,
+            53.8206834
+          ]
+        },
+        "properties": {
+          "name": "Manahatta"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.576604000069798,
+            53.82052655
+          ]
+        },
+        "properties": {
+          "name": "The Box"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.5765491266532923,
+            53.8197191
+          ]
+        },
+        "properties": {
+          "name": "The Skyrack"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.5757790591638021,
+            53.819656249999994
+          ]
+        },
+        "properties": {
+          "name": "The Original Oak"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.5615601,
+            53.8149337
+          ]
+        },
+        "properties": {
+          "name": "The Hyde Park"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.5568385102823505,
+            53.8107564
+          ]
+        },
+        "properties": {
+          "name": "The Library"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.5556947667428949,
+            53.81044125
+          ]
+        },
+        "properties": {
+          "name": "The Pack Horse"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.555314866229549,
+            53.8101323
+          ]
+        },
+        "properties": {
+          "name": "The Eldon"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.5561705250899878,
+            53.806532450000006
+          ]
+        },
+        "properties": {
+          "name": "Leeds University Union"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.5495265098466493,
+            53.805670199999994
+          ]
+        },
+        "properties": {
+          "name": "The Fenton"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.547654348175995,
+            53.8044978
+          ]
+        },
+        "properties": {
+          "name": "The Dry Dock"
+        }
+      }
+    ],
+    "name": "otleyRun"
+  }]
+  

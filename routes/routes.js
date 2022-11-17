@@ -63,7 +63,6 @@ router.get("/login", (req, res) => {
   //post route to sign up to CrawlSpace
   router.post("/signup",urlencodedParser, (req, res) => {
     console.log("posted to signup")
-    console.log(req.body)
     // connecting to MongoDB database
     MongoClient.connect(
       url,
@@ -84,14 +83,16 @@ router.get("/login", (req, res) => {
           if (req.body.password === req.body.confirmPassword) {
           console.log("passwords match")
           }
-           // checking user is over 18
+           // checking user is over 18 - if this is true, use bcrypt to hash and salt the password
           if (isValidDOB(req.body.dob)== true) {
             const hash = bcrypt.hash(req.body.password, 10, function(err, hash) {
             console.log(hash)
+            //adding the hashed password into the Mongo database
             customers.insertOne({ username: req.body.username, email: req.body.email, dob: req.body.dob, password: hash, confirmPassword: hash }, (err, result) => {})
           });
+          // if sign up is successful, user is redirected to home
           res.redirect("/home")
-          } else { console.log("Try again")
+          } else { res.send("Oops, there was a problem. Please try again")
           };
       });
   });
@@ -172,12 +173,12 @@ router.get("/myCrawls", (req, res) => {
 });
 
 // Link to settings 
-// router.get("/settings", (req, res) => {
-//   return res.render("settings", {
-//     title: "Mix up your experience"
+router.get("/settings", (req, res) => {
+  return res.render("settings", {
+    title: "Mix up your experience"
     
-//   });
-// });
+  });
+});
 
 // link to Pre built Crawls 
 router.get("/crawls", (req, res) => {

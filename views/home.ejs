@@ -8,12 +8,9 @@
 
 <body>
 
-    <div class="homepage">   
-        <div class="logo">
-              <h1 class="crawlspace crawlspaceHome">CRAWLSPACE</h1>
-        </div>
+    
 
-<!-- <div class = "myFriendsSlider"> 
+<div class = "myFriendsSlider"> 
   <div class="slides myFriends">
     <div id="friend-1"></div>
     <div id="friend-2"></div>
@@ -25,17 +22,16 @@
     <div id="friend-8"></div>
     <div id="friend-10"></div>
 </div>
-</div> -->
+</div>
 
 
 
         <div class="myCrawlsSlider">
-            <label class="textStyles textStylesCapital labels"> My crawls </label>
+            <label class="textStyles textStylesCapital labels">My crawls</label>
             <div class="slides">
-              <div id="slide-1">
+              <div id="slide-1" onclick="location.href='/map';">
 <!-- Below will have an image of the Otley Run, and clicking on it should take you to map
 Although this needs to be done once map is finished and uploaded to the VS code-->
-                <img src="../images/temporary_image.jpg" onclick="location.href='/map';">&nbsp;/>
               </div>
               <div id="slide-2"></div>
               <div id="slide-3"></div>
@@ -65,8 +61,6 @@ Although this needs to be done once map is finished and uploaded to the VS code-
             </div>
           </div>
 
-          <div class="footer textStyles textStylesCapital">
-            <p class="motto"><%= msg2%></p>
+
         <%- include('footer'); %>
-        </div>
 </body>

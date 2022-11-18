@@ -16,6 +16,7 @@ Clone the repo using your termianl with $ git clone https://github.com/OliBev59/
 
 install dependencies
 $ npm i
+$ npm run builddoc1 & npm run builddoc2
 
 # Running the application
 

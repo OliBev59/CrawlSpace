@@ -200,9 +200,9 @@ router.get("/crawls", (req, res) => {
   });
 
 
-  
-  router.get("/", (req, res) => {
-    return res.render("logout", {
+  //link to log out
+  router.get("/logout", (req, res) => {
+    return res.redirect('http://localhost:3000/', 301, {
     });
   });
 

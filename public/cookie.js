@@ -1,34 +1,16 @@
-document.querySelector('#loginForm').addEventListener('submit', () => {
-    setCookie('user', document.querySelector('#username').value, '/')
-    setCookie('pass', document.querySelector('#password').value, '/')
-  })
+var today = new Date();
+var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
 
-  if(!getCookie('username')||!getCookie('pasword')) if(location.href != 'https://somelocation.example/index.html/') location.replace('https://somelocation.example/index.html/')
+function setCookie(name, value)
+{
+  document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+}
+function putCookie(form){            //this should set the UserName cookie to the proper value;
+ console.log("cookies working")
+ setCookie("userName", form[0].username.value);
 
-  // Cookies setting and getting functions
-
-  function setCookie(name, value, path, options = {}) {
-          options = {
-              path: path,
-              ...options
-          }; if (options.expires instanceof Date) {
-              options.expires = options.expires.toUTCString();
-          } let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value)
-          for (let optionKey in options) {
-              updatedCookie += "; " + optionKey
-              let optionValue = options[optionKey]
-              if (optionValue !== true) {
-                  updatedCookie += "=" + optionValue
-              }
-          }
-          document.cookie = updatedCookie;
-  }
-
-  function getCookie(name) {
-          let matches = document.cookie.match(new RegExp(
-              "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-              ))
-          return matches ? decodeURIComponent(matches[1]) : undefined
-  }
-
-  
+  return true;
+}
+function eraseCookie(){
+    document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}

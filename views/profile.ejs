@@ -3,9 +3,33 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 rel="stylesheet"> 
 <link rel="stylesheet" href="main.css" />
-<body>
-    <label class="textStylesTitle textStylesCapital labels"> Welcome to your local </label>
 
+<body>
+    <div class="float-container">
+
+        <div class="float-child profilePhoto">
+        </div>
+        
+        <div class="float-child">
+            <button class="editProfile fa fa-pencil" alt="clickable button to edit profile informatiion"></button> 
+          </div>
+        </div>
+        
+      </div><br>
+
+<div class = "profileInfo">
+    <div class="textStyles textStylesCapital welcomeMessage">Welcome to your local, {username}</div>
+    <div class="textStyles usernameProfile">Username</div>
+    <div class="textStyles usernameProfile usernameProfileInput">{username}</div>
+    <div class="textStyles emailProfile">Email</div>
+    <div class="textStyles emailProfile emailProfileInput">{email address}</div>
+    <div class="textStyles dobProfile">Date of birth</div>
+    <div class="textStyles dobProfile dobProfileInput">{DOB}</div>
+</div>
+
+<div class = "textStyles deleteAccount">
+    Remove account
+</div>
 
 </body>
 

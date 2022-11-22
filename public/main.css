@@ -187,6 +187,7 @@ font-size: 25px;
     justify-content: center;
     align-items: center;
     font-size: 100px;
+    filter: grayscale(40%); 
   }
 
   .suggestedSlides {
@@ -208,6 +209,7 @@ font-size: 25px;
 
 .myFriendsSlider {
   justify-content: center;
+  margin-left: 5.5px;
 }
 
 
@@ -228,6 +230,7 @@ font-size: 25px;
     align-items: center;
     font-size: 100px;
     margin-bottom: 15px;
+    filter: grayscale(40%); 
   }
 
 
@@ -319,7 +322,7 @@ font-size: 25px;
 
 .profilePhoto {
   display: flex;
-  margin-right: 25px;
+  margin-right: 8px;
   width: 90px;
   height: 90px;
 } 

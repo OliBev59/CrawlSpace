@@ -3,6 +3,8 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const bcrypt = require("bcrypt");
 
+
+
 //connecting to MongoDB database
 const MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb://127.0.0.1:27017';
@@ -202,7 +204,11 @@ router.get("/crawls", (req, res) => {
 
   //link to log out
   router.get("/logout", (req, res) => {
+    res.clearCookie("userName")
+    // document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
     return res.redirect('http://localhost:3000/', 301, {
+    
+      
     });
   });
 

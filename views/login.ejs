@@ -8,11 +8,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet"> 
     <link rel="stylesheet" href="main.css" />
-    <!-- <script src=“cookie.js”></script> -->
-    <script>
+    <script src="cookie.js"></script>
+    <!-- <script>
         var today = new Date();
         var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
         
+        document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
           function setCookie(name, value)
           {
             document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
@@ -23,8 +24,7 @@
            setCookie("userName", form[0].username.value);
             return true;
           }
-        
-        </script>
+        </script> -->
 </head>
 
 <body>
@@ -54,7 +54,8 @@
 </form>
 </div>
 
-<%- include('footer'); %>
 </body>
+
+<%- include('footer'); %>
 
 </html>

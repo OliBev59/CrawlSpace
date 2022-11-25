@@ -9,7 +9,7 @@
 <body>
 
     
-
+<!--Local images to be displayed for the friends slider-->
 <div class = "myFriendsSlider"> 
   <div class="slides myFriends">
     <div id="friend-1" class = "slides myFriends">
@@ -40,8 +40,8 @@
     width="65"
     height="65"/>
     </div>
-    <div id="friend-5" class ="slides myFriends">
-      <img id="friend-5"
+    <div id="friend-5" class ="slides myFriends addNewItem">
+      <img id="addNewItem"
       src="images/plusIcon.png"
       alt="Friend profile"
       width="25"
@@ -51,37 +51,59 @@
 </div>
 </div>
 
-
-
+<!--Local images and text to be displayed for the My Crawls slider
+In the future, we would want the texts and images to be personalised by the user -->
         <div class="myCrawlsSlider">
             <label class="textStyles textStylesCapital labels">My crawls</label>
             <div class="slides">
               <div id="slide-1" onclick="location.href='/map';"> 
-<!-- Below will have an image of the Otley Run, and clicking on it should take you to map
-Although this needs to be done once map is finished and uploaded to the VS code-->
+                <img id="slide-1" class="suggestedSlides"
+                src="images/Map2.png"
+                alt="Map displaying user-created pub crawl"
+                width="240"
+                height="215"/>
+                <div class = "textStyles textStylesSliders"> Otley Run</div>
               </div>
               <div id="slide-2"> 
+                <img id="slide-2" class="suggestedSlides"
+                src="images/Map.png"
+                alt="Map displaying user-created pub crawl"
+                width="240"
+                height="215"/>
                 <div class = "textStyles textStylesSliders"> Harold's stag</div>
               </div>
               <div id="slide-3">
+                <img id="slide-3" class="suggestedSlides"
+                src="images/Map3.png"
+                alt="Map displaying user-created pub crawl"
+                width="240"
+                height="215"/>
                 <div class = "textStyles textStylesSliders"> Gemma's birthday</div>
               </div>
               <div id="slide-4"> 
-                <div class = "textStyles textStylesSliders"> Berlin trip</div>
+                <img id="slide-4" class="suggestedSlides"
+                src="images/Map4.png"
+                alt="Map displaying user-created pub crawl"
+                width="240"
+                height="215"/>
+                <div class = "textStyles textStylesSliders"> Helen's hen</div>
               </div>
               <div id="slide-5"></div>
+                </div>
+            </div>
             </div>
           </div>
 
+          <!--Local images to be displayed for the Suggested Crawls slider-->
           <div class="suggestedCrawlsSlider">
             <label class="textStyles textStylesCapital labels"> Suggested crawls </label>
             <div class="slides">
-              <div id="slide-11">
-                <img id="slide-11" class="suggstedSlides"
+              <div id="slide-11"> 
+                <img id="slide-11" class="suggestedSlides"
                 src="images/UK.png"
                 alt="Image of the flag of the United Kingdom"
                 width="240"
-                height="215"/>
+                height="215"/> 
               </div>
               <div id="slide-12">
                 <img id="slide-12" class="suggestedSlides"

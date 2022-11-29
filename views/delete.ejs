@@ -1,0 +1,25 @@
+<%- include('header') %>
+
+<div class="textStyles textStylesCapital ">Are you sure you want to abandon the crawl?  
+</div>
+
+<form class = profileInfo action="/delete" method="delete">
+    <div class = "profileInfo">
+        <div class="textStyles textStylesCapital welcomeMessage">Welcome to your local, <%= user.username%>!</div>
+        <div class="textStyles usernameProfile">Username:</div>
+        <div class="textStyles usernameProfile usernameProfileInput"><%= user.username %></div>
+        <div class="textStyles emailProfile">Email:</div>
+        <div class="textStyles emailProfile emailProfileInput"><%= user.email %></div>
+        <div class="textStyles dobProfile">Date of birth: </div>
+        <div class="textStyles dobProfile dobProfileInput"><%= user.dob %></div>
+    </div>
+    </form>
+    <div class="container">
+        <h1>Delete User</h1>
+        <form method="post" action="/delete">
+            <input type="submit" value="delete" class="delete" label="I am sure" />
+          </div>
+        </form>
+      
+        <p><a href="/profile" class="add">stay</a></p>
+      </div>

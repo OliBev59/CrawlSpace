@@ -22,6 +22,7 @@ rel="stylesheet">
         
       </div><br>
 
+<form class = profileInfo action="/edit" method="put">
 <div class = "profileInfo">
     <div class="textStyles textStylesCapital welcomeMessage">Welcome to your local, <%= user.username%>!</div>
     <div class="textStyles usernameProfile">Username:</div>
@@ -31,11 +32,11 @@ rel="stylesheet">
     <div class="textStyles dobProfile">Date of birth: </div>
     <div class="textStyles dobProfile dobProfileInput"><%= user.dob %></div>
 </div>
+</form>
 
-<div class = "textStyles deleteAccount">
-    Remove account
-</div>
-
+<form class = "profileInfo" action="/delete" method="delete">
+<div class = "textStyles deleteAccount"><button href="/delete.ejs">Remove account</button> </div>
+</form>
 </body>
 
 

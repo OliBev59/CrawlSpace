@@ -198,6 +198,51 @@ router.get("/profile", async (req, res) => {
   }
 });
 
+//get route to delete
+router.get("/delete", async (req, res) => {
+    let user = null;
+  
+    try {
+      await client.connect();
+      const customers = await client.db("pubsDB").collection("customers");
+  
+      user = await customers.findOne({ _id: userID });
+    } finally {
+      // Ensures that the client will close when you finish/error
+      await client.close();
+
+  return res.render("delete", {
+    title: "Homepage",
+    myHeading: "My Crawls",
+    myHeading2: "Suggested Crawls",
+    msg2: "Crawl into the weekend",
+    user: {
+      email: user.email,
+      username: user.username,
+      dob: user.dob,
+    },
+  })};
+});
+
+//route to delete profile
+router.post("/delete", async (req, res) => {
+  let user = null;
+  
+    try {
+      await client.connect();
+      const customers = await client.db("pubsDB").collection("customers");
+      
+      // finds and then deletes user from database
+      user = await customers.findOne({ _id: userID });
+      user = await customers.deleteOne({ _id: userID });
+
+    } finally {
+      // Ensures that the client will close when you finish/error
+      await client.close();
+          return res.redirect('http://localhost:3000/', 301, { //redirect to login/signup home page after deleting user
+          });
+        }});
+
 // link to myCrawls
 router.get("/myCrawls", (req, res) => {
   return res.render("myCrawls", {

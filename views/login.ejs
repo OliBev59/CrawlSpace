@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Link page to main.css stylesheet, icons, and javascript function enabling cookie-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet"> 
     <link rel="stylesheet" href="main.css" />
@@ -29,11 +30,13 @@
 
 <body>
 
+  <!-- Display the CrawlSpace logo -->
     <div class="homepage">   
         <div class="logo">
               <h1 class="crawlspace">CRAWLSPACE</h1>
     </div>
  
+    <!-- Login form (username and password drawn from Monogo DB) -->
 <form class= "loginForm" action="/login" method="post">
 <div class="loginContainer">
     <div class ="username">
@@ -46,8 +49,10 @@
     </div>
 </div>
 
+<!-- Login button adds cookie if login information is correct-->
 <label for="submit"><input type="submit" class = "button greenButton loginButton" value="Login" onclick="putCookie(document.getElementsByTagName('form'));"></label>
 
+<!-- Currently non-functional 'forgot password?' prompt-->
 <div class ="forgotPassword">
 <a class = "forgotPassword textStyles" href="/?"> Forgot your password?</a>
 </div>

@@ -9,7 +9,7 @@ rel="stylesheet">
 
         <div class="float-child profilePhoto">
             <img id="friend-3"
-            src="images/Vi.png"
+            src="images/GreyedOut.jpeg"
             alt="Friend profile"
             width="90"
             height="90"/>
@@ -23,13 +23,13 @@ rel="stylesheet">
       </div><br>
 
 <div class = "profileInfo">
-    <div class="textStyles textStylesCapital welcomeMessage">Welcome to your local, {username}</div>
-    <div class="textStyles usernameProfile">Username</div>
-    <div class="textStyles usernameProfile usernameProfileInput">{username}</div>
-    <div class="textStyles emailProfile">Email</div>
-    <div class="textStyles emailProfile emailProfileInput">{email address}</div>
-    <div class="textStyles dobProfile">Date of birth</div>
-    <div class="textStyles dobProfile dobProfileInput">{DOB}</div>
+    <div class="textStyles textStylesCapital welcomeMessage">Welcome to your local, <%= user.username%>!</div>
+    <div class="textStyles usernameProfile">Username:</div>
+    <div class="textStyles usernameProfile usernameProfileInput"><%= user.username %></div>
+    <div class="textStyles emailProfile">Email:</div>
+    <div class="textStyles emailProfile emailProfileInput"><%= user.email %></div>
+    <div class="textStyles dobProfile">Date of birth: </div>
+    <div class="textStyles dobProfile dobProfileInput"><%= user.dob %></div>
 </div>
 
 <div class = "textStyles deleteAccount">

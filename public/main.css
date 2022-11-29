@@ -1,8 +1,10 @@
+/* Colour-code the main body of each page */
 body {
     background-color:  #242526;
     height: 100%;
 }
-      
+
+/* CSS for the CrawlSpace logo depending on page */
 .crawlspace {
     color: white;
     display: flex;
@@ -12,18 +14,14 @@ body {
 }
 
 .crawlspaceHome {
-    color: white;
-    margin-top: 1vh;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    justify-content: center;
-    display:flex;
-    
+    margin-top: 1vh;    
   }
 
 .crawlspaceInput {
   margin-top: 45%;
 }
 
+/* Standard button format with colour and style changes below */
 
 .button {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -36,9 +34,7 @@ body {
     text-decoration: none; 
     width: 40%;
     margin: auto;
-    border-radius: 5px;
-  
-    
+    border-radius: 5px;  
 }
 
 .greenButton {
@@ -53,19 +49,18 @@ body {
     margin-top: 10px; 
 }
 
+.loginButton {
+  margin-top: 15px;
+}
+
+
+/* Styles for text */
+
 .textStyles {
     display: flex; 
     color: white;
     font-size: 15px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-}
-
-/* Sub headings */
-.textStylesTitle {
-  display:flex;
-  color: white;
-  font-size: 25px;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;;
 }
 
 .labels {
@@ -90,16 +85,13 @@ body {
   padding: 10px;
 }
 
+/* style for sign-up form */
 .username, .password, .registerForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 80%;
     margin: auto;
-}
-
-.loginButton {
-    margin-top: 15px;
 }
 
 .formInput {
@@ -116,6 +108,7 @@ body {
 }
 
 /* Footer styling - uniform acorss web app */
+
 .footer {
     display: flex;
     justify-content: center;
@@ -135,8 +128,6 @@ body {
     justify-content: center;
     margin-top: -0vh;   
 }
-
-
 
 
 /* Slider CSS */
@@ -173,6 +164,8 @@ body {
     background: transparent;
   }
 
+/* CSS for the styles of the divs within the slider */
+
   .slides > div {
     scroll-snap-align: start;
     flex-shrink: 0;
@@ -199,21 +192,24 @@ body {
     border-radius: 10px;
   }
 
-.img {
+/* .img {
     object-fit: cover;
     position: absolute;
     width: 100%;
   }
-  
+   */
 .suggestedCrawlsSlider {
     margin-top: 30px;
 }
+
+/* Style elements for the My Friends slider at the top of the homepage */
 
 .myFriendsSlider {
   justify-content: center;
   margin-left: 5.5px;
 }
 
+/* Style the divs within the My Friends slider */
 
 .myFriends > div {
     scroll-snap-align: start;
@@ -268,7 +264,6 @@ body {
     top: 24px;
   }
 
-  
   /* Style the active link (or home/logo) */
   .active {
     background-color: #242526;
@@ -306,9 +301,9 @@ body {
   height: 50%;
 }
 
-
-
 /* Profile CSS */
+
+/* Create cirlce divs for the profile photo and edit page buttons */ 
 
 .profilePhoto, .editProfile {
   margin-top: 15px;
@@ -322,6 +317,7 @@ body {
   margin-bottom: 15px;
 }
 
+/* Add different sizes for profile photo and edit profile buttons */
 .profilePhoto {
   display: flex;
   margin-right: 8px;
@@ -336,17 +332,18 @@ body {
   height: 40px;
 }
 
+/* Style float container so that profile photo and edit profile button can sit side-by-side */
 
 .float-container {
   padding: 20px;
 } 
-
 
 .float-child {
   float: left;
   justify-content: center;
 } 
 
+/* Style the profile info box */
 
 .profileInfo {
   display: flex;
@@ -359,26 +356,25 @@ body {
   background: #333;
 }
 
-
+/* Style the remove account option */
 .deleteAccount {
   margin-top: 20px;
   display: flex;
   justify-content: center;
 }
 
-
+/* Add stylist elements to the information displayed within the profile box */ 
 .usernameProfile, .emailProfile, .dobProfile {
   position: absolute;
   display: flex; 
   margin-left: 5%;
 }
 
-
 .welcomeMessage {
+  position: relative;
   display: flex;
   margin-top: 20px;
-  justify-content: center;
-  margin-left: 8%;
+  margin-left: 15%;
 }
 
 .usernameProfile {
@@ -394,6 +390,6 @@ body {
 }
 
 .usernameProfileInput, .emailProfileInput, .dobProfileInput {
-  margin-left: 30%;
+  margin-left: 35%;
 } 
 

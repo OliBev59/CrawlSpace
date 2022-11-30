@@ -33,7 +33,6 @@ function getCookie(cname) {
 }
 function checkCookie() {
   let user = document.cookie
-  print(user)
   if ( user !== "" ) {
   } else {
     alert("not signed in");

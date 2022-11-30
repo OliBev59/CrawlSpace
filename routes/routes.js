@@ -70,6 +70,7 @@ router.get("/signup", (req, res) => {
 //post route to sign up to CrawlSpace
 router.post("/signup", urlencodedParser, (req, res) => {
   console.log("posted to signup");
+
   // connecting to MongoDB database
   MongoClient.connect(
     url,
@@ -81,12 +82,13 @@ router.post("/signup", urlencodedParser, (req, res) => {
       if (err) {
         return console.log(err);
       }
+
       // specify the database and collection to access and update customer data
       const db = client.db("pubsDB");
       console.log(`MongoDB Connected: ${url}`);
       const customers = db.collection("customers");
-      // adding inputted information to database
-      // checking passwords match
+
+      // adding inputted information to database and checking passwords match 
       if (req.body.password === req.body.confirmPassword) {
         console.log("passwords match");
       }
@@ -94,6 +96,7 @@ router.post("/signup", urlencodedParser, (req, res) => {
       if (isValidDOB(req.body.dob) == true) {
         const hash = bcrypt.hash(req.body.password, 10, function (err, hash) {
           console.log(hash);
+
           //adding the hashed password into the Mongo database
           customers.insertOne(
             {
@@ -106,6 +109,7 @@ router.post("/signup", urlencodedParser, (req, res) => {
             (err, result) => {}
           );
         });
+
         // if sign up is successful, user is redirected to home
         res.redirect("/home");
       } else {
@@ -115,12 +119,11 @@ router.post("/signup", urlencodedParser, (req, res) => {
   );
 });
 
-//need to add a find to make sure the email doesn't already exist in database
-
 //post route to log in to CrawlSpace
 router.post("/login", urlencodedParser, (req, res) => {
   console.log("posted to login");
   console.log(req.body);
+
   // connecting to MongoDB database
   MongoClient.connect(
     url,
@@ -132,13 +135,16 @@ router.post("/login", urlencodedParser, (req, res) => {
       if (err) {
         return console.log(err);
       }
+
       // specify the database and collection to access and update customer data
       const db = client.db("pubsDB");
       console.log(`MongoDB Connected: ${url}`);
       const customers = db.collection("customers");
+
       //finding user information for database
       if (await customers.findOne({ username: req.body.username })) {
         console.log("user exists");
+
         // retrieving and comparing user password to password stored in the database
         const customerInfo = await customers.findOne({
           username: req.body.username,
@@ -146,16 +152,20 @@ router.post("/login", urlencodedParser, (req, res) => {
         console.log("logged in user", customerInfo);
         const hashInDb = customerInfo.password;
         bcrypt.compare(req.body.password, hashInDb, function (err, result) {
+
+          // if login is successful, user is redirected to homepage
           if (result) {
             userID = customerInfo._id;
-            res.redirect("/home"); // if login is successful, user is redirected to homepage
+            res.redirect("/home");
           } else {
-            res.send("error: invalid credentials - please try again"); // error is presented to user if password is incorrect
+          // error is presented to user if password is incorrect
+            res.send("error: invalid credentials - please try again");
           }
         });
+      // if the user does not have an account, they are redirected to the signup page
       } else {
         console.log("user not found");
-        res.redirect("/signup"); // if the user does not have an account, they are redirected to the signup page
+        res.redirect("/signup"); 
       }
     }
   );

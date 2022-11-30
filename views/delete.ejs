@@ -5,7 +5,6 @@
 
 <form class = profileInfo action="/delete" method="delete">
     <div class = "profileInfo">
-        <div class="textStyles textStylesCapital welcomeMessage">Welcome to your local, <%= user.username%>!</div>
         <div class="textStyles usernameProfile">Username:</div>
         <div class="textStyles usernameProfile usernameProfileInput"><%= user.username %></div>
         <div class="textStyles emailProfile">Email:</div>
@@ -15,11 +14,10 @@
     </div>
     </form>
     <div class="container">
-        <h1>Delete User</h1>
         <form method="post" action="/delete">
-            <input type="submit" value="delete" class="delete" label="I am sure" />
+            <input type="submit" value="Yes, delete my account" class="delete" label="delete" />
           </div>
         </form>
       
-        <p><a href="/profile" class="add">stay</a></p>
+        <p><a href="/profile" class="add">No, crawl on!</a></p>
       </div>

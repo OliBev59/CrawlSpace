@@ -1,23 +1,41 @@
-<%- include('header') %>
+<%- include('header'); %>
 
-<div class="textStyles textStylesCapital ">Are you sure you want to abandon the crawl?  
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet"> 
+<link rel="stylesheet" href="main.css" />
+
+<body>
+    <div class="float-container">
+
+        <div class="float-child profilePhoto">
+            <img id="friend-3"
+            src="images/GreyedOut.jpeg"
+            alt="Friend profile"
+            width="90"
+            height="90"/>
+        </div>
+        </div>
+
+
+<form action="/edit" method="put">
+<div class = "profileInfo">
+    <div class="textStyles textStylesCapital welcomeMessage">Welcome to your local, <%= user.username%>!</div>
+    <div class="textStyles usernameProfile">Username:</div>
+    <div class="textStyles usernameProfile usernameProfileInput"><%= user.username %></div>
+    <div class="textStyles emailProfile">Email:</div>
+    <div class="textStyles emailProfile emailProfileInput"><%= user.email %></div>
+    <div class="textStyles dobProfile">Date of birth: </div>
+    <div class="textStyles dobProfile dobProfileInput"><%= user.dob %></div>
 </div>
+</form>
 
-<form class = profileInfo action="/delete" method="delete">
-    <div class = "profileInfo">
-        <div class="textStyles usernameProfile">Username:</div>
-        <div class="textStyles usernameProfile usernameProfileInput"><%= user.username %></div>
-        <div class="textStyles emailProfile">Email:</div>
-        <div class="textStyles emailProfile emailProfileInput"><%= user.email %></div>
-        <div class="textStyles dobProfile">Date of birth: </div>
-        <div class="textStyles dobProfile dobProfileInput"><%= user.dob %></div>
-    </div>
-    </form>
-    <div class="container">
-        <form method="post" action="/delete">
-            <input type="submit" value="Yes, delete my account" class="delete" label="delete" />
-          </div>
-        </form>
-      
-        <p><a href="/profile" class="add">No, crawl on!</a></p>
-      </div>
+  <div class="textStyles abandonCrawl">Are you sure you want to abandon the crawl?</div>
+    <a class = "button greenButton crawlOnButton" href="/profile">No, crawl on!</a> 
+    <form method="post" action="/delete">
+        <input type="submit" class="button almostBlackButton deleteButton" value="Yes, delete my account" label="delete" />
+      </form>
+
+</body>
+
+
+<%- include('footer'); %>

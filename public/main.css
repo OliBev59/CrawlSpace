@@ -126,9 +126,8 @@ body {
 .motto, .copywrite {
     display: flex;
     justify-content: center;
-    margin-top: -0vh;   
+    margin-top: -0vh;
 }
-
 
 /* Slider CSS */
 
@@ -393,3 +392,20 @@ body {
   margin-left: 35%;
 } 
 
+/* CSS for delete account page */
+
+.abandonCrawl {
+  margin-top: 45px;
+  justify-content: center;
+}
+
+.crawlOnButton {
+  margin-top: 15px;
+  width: 50%;
+}
+
+.deleteButton {
+  margin-top: 8px;
+  width: 50%;
+  justify-content: center;
+}

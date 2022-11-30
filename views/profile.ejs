@@ -19,10 +19,8 @@ rel="stylesheet">
             <button class="editProfile fa fa-pencil" alt="clickable button to edit profile informatiion"></button> 
           </div>
         </div>
-        
-      </div><br>
 
-<form class = profileInfo action="/edit" method="put">
+<form action="/edit" method="put">
 <div class = "profileInfo">
     <div class="textStyles textStylesCapital welcomeMessage">Welcome to your local, <%= user.username%>!</div>
     <div class="textStyles usernameProfile">Username:</div>
@@ -34,8 +32,9 @@ rel="stylesheet">
 </div>
 </form>
 
-<form class = "profileInfo" action="/delete" method="delete">
-<div class = "textStyles deleteAccount"><button href="/delete.ejs">Remove account</button> </div>
+<form action="/delete" method="delete">
+    <div>
+        <a class = "button almostBlackButton signUpButton" href="/delete">Delete account</a> 
 </form>
 </body>
 

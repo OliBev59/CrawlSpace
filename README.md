@@ -6,8 +6,7 @@ Things needed to run the Web Application
 
 - Node
 - MongoDB
-- IDE suh as visual code studio
--
+- Command Line Tool such as Terminal
 
 Navigate on your local machine to a folder where you wish to save the project
 '$ cd <yourname>/files/code/project'

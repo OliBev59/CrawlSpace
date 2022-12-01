@@ -233,6 +233,16 @@ router.get("/delete", async (req, res) => {
   })};
 });
 
+
+router.get("/contact", (req, res) => {
+  return res.render("contact", {
+    num: "07702692811",
+    ad: "4 wellington place",
+    email: "cs@gamil.com",
+  });
+});
+
+
 //route to delete profile
 router.post("/delete", async (req, res) => {
   let user = null;

@@ -122,7 +122,6 @@ router.post("/signup", urlencodedParser, (req, res) => {
 //post route to log in to CrawlSpace
 router.post("/login", urlencodedParser, (req, res) => {
   console.log("posted to login");
-  console.log(req.body);
 
   // connecting to MongoDB database
   MongoClient.connect(

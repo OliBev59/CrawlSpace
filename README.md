@@ -21,9 +21,10 @@ $ npm run builddoc1 & npm run builddoc2
 
 1. Ensure the above steps have been adhearded to
 2. open project folder in your IDE
-3. Run the application with 'nodemon app.js'
-4. In your browser load 'localhost:3000'
-5. The database is hosted by MongoDB
+3. install dependencies using 'npm install'
+4. Run the application with 'nodemon app.js'
+5. In your browser load 'localhost:3000'
+6. The database is hosted by MongoDB
 
 To access the stored database, run the following command:
 mongoimport --db pubsDB --collection customers --jsonArray --file data/CSusers.json
